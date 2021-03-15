@@ -7,7 +7,7 @@ using System.Text;
 
 namespace eShopSolution.Data.Configuration
 {
-    public class ProductIdCategoryConfiguration : IEntityTypeConfiguration<ProductInCategory>
+    public class ProductInCategoryConfiguration : IEntityTypeConfiguration<ProductInCategory>
     {
         public void Configure(EntityTypeBuilder<ProductInCategory> builder)
         {
