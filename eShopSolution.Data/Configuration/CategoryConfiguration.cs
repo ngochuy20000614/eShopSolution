@@ -19,7 +19,6 @@ namespace eShopSolution.Data.Configuration
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Status).HasDefaultValue(Status.Active);
-
         }
     }
 }
