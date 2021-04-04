@@ -4,18 +4,18 @@ using System.Text;
 
 namespace eHocBongSolution.Utilities.Exceptions
 {
-    public class EHocBongException : Exception
+    public class EShopException : Exception
     {
-        public EHocBongException()
+        public EShopException()
         {
         }
 
-        public EHocBongException(string message)
+        public EShopException(string message)
             : base(message)
         {
         }
 
-        public EHocBongException(string message, Exception inner)
+        public EShopException(string message, Exception inner)
             : base(message, inner)
         {
         }
