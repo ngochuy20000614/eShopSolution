@@ -1,6 +1,7 @@
 using eHocBongSolution.Utilities.Constants;
 using eShopSolution.Application.Catalog.Products;
 using eShopSolution.Application.Catalog.Products.Public;
+using eShopSolution.Application.Common;
 using eShopSolution.Data.EF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +34,9 @@ namespace eShopSolution.BackendApi
             .UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
             //Declare DI
+            services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
             services.AddControllersWithViews();
 
             services.AddSwaggerGen(c =>
