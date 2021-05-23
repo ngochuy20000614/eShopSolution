@@ -17,8 +17,8 @@ namespace eShopSolution.ViewModels.System.Users
 
             RuleFor(x => x.DOB).GreaterThan(DateTime.Now.AddYears(-100)).WithMessage("Birth day cannot greater than 100 years");
 
-            RuleFor(x => x.Email).NotEmpty().WithMessage("Email is required").
-                Matches(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")
+            RuleFor(x => x.Email).NotEmpty().WithMessage("Email is required")
+                .Matches(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")
                 .WithMessage("Email format not match");
 
             RuleFor(x => x.PhoneNumber).NotEmpty().WithMessage("Phone number is required");
