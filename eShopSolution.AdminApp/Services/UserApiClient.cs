@@ -44,6 +44,7 @@ namespace eShopSolution.AdminApp.Services
             return JsonConvert.DeserializeObject<ApiErrorResult<string>>(await response.Content.ReadAsStringAsync());
         }
 
+
         public async Task<ApiResult<bool>> Delete(Guid id)
         {
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
